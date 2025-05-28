@@ -1,12 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Панель керування</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Troll Photo with Music</title>
+  <style>
+    /* Стилі для кнопки */
+    .troll-button {
+      padding: 10px 20px;
+      background-color: #f44336;
+      color: white;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .troll-button:hover {
+      background-color: #d32f2f;
+    }
+
+    /* Стилі для фотографії */
+    .troll-photo {
+      display: none;
+      margin-top: 20px;
+      width: 300px;
+      height: 300px;
+    }
+  </style>
 </head>
 <body>
-  <h1>Управління</h1>
-  <button onclick="setStatus('show')">Показати</button>
-  <button onclick="setStatus('hide')">Сховати</button>
-  <p>✏️ Самостійно змінюй в Google Документі слово на <b>show</b> або <b>hide</b></p>
+  <h1>Welcome to the Troll Page!</h1>
+
+  <!-- Кнопка "TROLL" -->
+  <button class="troll-button" onclick="showTrollPhotoAndPlayMusic()">TROLL</button>
+
+  <!-- Місце для фотографії -->
+  <img id="trollPhoto" class="troll-photo" src="https://mobilaser.kz/wp-content/uploads/2022/07/hacked.jpg" alt="Troll Photo">
+
+  <!-- Аудіофайл для відтворення -->
+  <audio id="trollMusic" src="file:///C:/Users/user12009/Downloads/Voicy_troll%20face%20laugh.mp3" preload="auto"></audio>
+
+  <script>
+    // Функція для відображення фотографії та відтворення музики
+    function showTrollPhotoAndPlayMusic() {
+      var photo = document.getElementById('trollPhoto');
+      var music = document.getElementById('trollMusic');
+      
+      // Відображаємо фотографію
+      photo.style.display = 'block';
+
+      // Відтворюємо музику
+      music.play();
+    }
+  </script>
 </body>
 </html>
